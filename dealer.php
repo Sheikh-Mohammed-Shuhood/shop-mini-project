@@ -5,12 +5,12 @@ echo "Great Work!";
 //sql staments
 
 
-$cname = $_POST['cname'];
-$cphone = $_POST['cphone'];
-$cadd = $_POST['cadd'];
+$dname = $_POST['dname'];
+$dphone = $_POST['dphone'];
+$dadd = $_POST['dadd'];
 
 
-$sql = "INSERT INTO `customer` (`cid`, `cname`, `cphone`, `cadd`) VALUES (NULL, '$cname', '$cphone', '$cadd');";
+$sql = "INSERT INTO `dealer` (`did`, `dname`, `dphone`, `dadd`) VALUES (NULL, '$dname', '$dphone', '$dadd');";
 //print out the result
 $result = mysqli_query($conn, $sql);
 
