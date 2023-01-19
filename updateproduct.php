@@ -4,18 +4,18 @@ echo "Great Work!";
 
 //sql staments
 
-
-$prodname = $_POST['prodname'];
+$pid = $_POST['pid'];
 $prodcost = $_POST['prodcost'];
 $instock = $_POST['instock'];
 
 
-$sql = "INSERT INTO `product` (`pid`, `prodname`, `prodcost`, `instock`) VALUES (NULL, '$prodname', '$prodcost', '$instock');";
+$sql = "UPDATE PRODUCT SET PRODCOST='$prodcost' WHERE PID='$pid';";
+$sql1 = "UPDATE PRODUCT SET INSTOCK='$instock' WHERE PID='$pid';";
 //print out the result
 $result = mysqli_query($conn, $sql);
-
+$result2 = mysqli_query($conn, $sql1);
 echo "Success";
-header("Location: home.html");
+// header("Location: productview.php");
 
 ?>
 
